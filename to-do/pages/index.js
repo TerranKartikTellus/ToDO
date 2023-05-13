@@ -35,11 +35,11 @@ export default function Home() {
     <main
       className={` ${inter.className} flex flex-col min-h-screen w-full items-center justify-center bgred-500`}
     >
-     <div className={` rounded-t w-3/12 bg-gray-50 text-gray-900 p-5 `}>
+     <div className={` rounded-t w-10/12 md:w-7/12 lg:w-3/12 bg-gray-50 text-gray-900 p-5 `}>
       <h1 className='text-2xl tracking-wide font-light'>ToDo</h1>
       <ToDoRow list={list} update_List={setList}></ToDoRow>
      </div>
-     <div className='w-3/12 bg-gray-50 text-gray-400 p-2 rounded-b border-t border-gray-300 flex flex-row items-center justify-between'>
+     <div className=' w-10/12 md:w-7/12 lg:w-3/12 bg-gray-50 text-gray-400 p-2 rounded-b border-t border-gray-300 flex flex-row items-center justify-between'>
         <input onKeyDown={handleKeyDown} value={current_task} onChange={(e)=>{set_current_task(e.target.value)}} type='text' className='capitalize bg-gray-100 text-gray-400 rounded outline-[1px] py-2 px-4 outline-gray-300' placeholder='Add task here...'></input>
         <Button onclick={update_list} text={'Add'}></Button>
       </div>
